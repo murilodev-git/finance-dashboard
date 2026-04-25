@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard Financeiro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Dashboard Financeiro</h1>
+
+<form id="form">
+  <input id="descricao" placeholder="Descrição" required>
+
+  <select id="categoria">
+    <option value="Receita">Receita</option>
+    <option value="Despesa">Despesa</option>
+  </select>
+
+  <input id="valor" type="number" placeholder="Valor" required>
+
+  <select id="mes">
+    <option value="Abril">Abril</option>
+    <option value="Maio">Maio</option>
+  </select>
+
+  <button type="submit">Adicionar</button>
+</form>
+
+<div class="filtros">
+  <select id="filtroMes">
+    <option value="">Todos os meses</option>
+    <option value="Abril">Abril</option>
+    <option value="Maio">Maio</option>
+  </select>
+
+  <select id="filtroCategoria">
+    <option value="">Todas</option>
+    <option value="Receita">Receita</option>
+    <option value="Despesa">Despesa</option>
+  </select>
+
+  <button onclick="baixarRelatorio()">Baixar Relatório PDF</button>
+</div>
+
+<div id="resumo"></div>
+<div id="lista"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
