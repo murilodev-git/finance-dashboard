@@ -3,7 +3,7 @@ const fs = require('fs-extra');
 const PDFDocument = require('pdfkit');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const DB = './db.json';
 
 app.use(express.json());
@@ -102,5 +102,5 @@ app.get('/relatorio', async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Servidor rodando em http://localhost:${PORT}`);
+  console.log(`Finance Dashboard rodando na porta ${PORT}`);
 });
